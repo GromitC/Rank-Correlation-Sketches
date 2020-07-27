@@ -20,8 +20,8 @@ def condensed_to_square(k, n):
 class KTSketch():
     def __init__(self,epsilon=0.05,CI=0.95,dim=1000,seed=0):
         
-        assert 0 <= epsilon <= 1, "epsilon should be in the range of (0,1]"
-        assert 0 <= CI <= 1, "CI should be in the range of [0,1)"
+        assert 0 < epsilon <= 1, "epsilon should be in the range of (0,1]"
+        assert 0 <= CI < 1, "CI should be in the range of [0,1)"
         
         np.random.seed(seed)
         self.nTrials = math.ceil(2 * np.log( 2 / (1 - CI) ) / (epsilon * epsilon))
