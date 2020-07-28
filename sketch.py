@@ -1,6 +1,5 @@
 import math
 import numpy as np
-import itertools
 
 #Condensed index to indices from https://stackoverflow.com/a/36867493
 def calc_row_idx(k, n):
